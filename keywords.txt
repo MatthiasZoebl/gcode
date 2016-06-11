@@ -1,0 +1,11 @@
+GCode			KEYWORD1
+setCode			KEYWORD2
+getCode			KEYWORD2
+getD			KEYWORD2
+getT			KEYWORD2
+getM			KEYWORD2
+getG			KEYWORD2
+getX			KEYWORD2
+getY			KEYWORD2
+getZ			KEYWORD2
+getF			KEYWORD2

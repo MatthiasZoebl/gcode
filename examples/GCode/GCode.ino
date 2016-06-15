@@ -1,16 +1,20 @@
-#include <GCode.h>
+#include <GCode.h>    // include gcode-interpreter library
 
-GCode gcode(true);
+GCode gcode(true);    // instance of gcode-interpreter
 
 void setup()
 {
+  // initialize serial
   Serial.begin(9600);
 }
 
 void loop()
 {
-  char* codeLine = "D1 T4 M3 G1 X50 Y25.3 Z22.4 F3000";
+  // set the code line to some random gcode commands
+  String codeLine = "D1 T4 M3 G1 X50 Y25.3 Z22.4 F3000";
+  // set variable 'codeLine' as code line
   gcode.setCode(codeLine);
+  // print all gcode values
   Serial.print("Code: ");
   Serial.println(gcode.getCode());
   Serial.print("D: ");
@@ -29,6 +33,7 @@ void loop()
   Serial.println(gcode.getZ(),3);
   Serial.print("F: ");
   Serial.println(gcode.getF(),3);
+  // infinite loop
   while(1);
 }
 
